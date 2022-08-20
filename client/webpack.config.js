@@ -29,16 +29,18 @@ module.exports = () => {
       }), 
 
       new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
         name: "Text Editor",
         short_name: "TextEditor",
         description: "Keep track of your code!", 
         background_color: '#7eb4e2',
         theme_color: '#7eb4e2',
-        start_url: './',
-        publicPath: './',
+        start_url: '/',
+        publicPath: '/',
         icons: [
           {
-            src: path.resolve('assets/images/logo.png'),
+            src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
           },
